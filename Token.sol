@@ -5,9 +5,9 @@ import './ReceivingContractCallback.sol';
 
 contract Token is MintableToken {
 
-  string public constant name = "Worldopoly";
+  string public constant name = "MAKEtoken";
 
-  string public constant symbol = "WPT";
+  string public constant symbol = "MKT";
 
   uint32 public constant decimals = 18;
 
