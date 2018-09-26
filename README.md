@@ -2,7 +2,7 @@
 
 - _Standard_ : [ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md)
 - _[Name](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#name)_ : MAKE token
-- _[Ticker](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#symbol)_ : MKT
+- _[Ticker](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#symbol)_ : MAKE
 - _[Decimals](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#decimals)_ : 18
 - _Emission_ : Mintable
 - _Crowdsales_ : 3
