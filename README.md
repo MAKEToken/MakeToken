@@ -103,3 +103,10 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 3. 10% over the next 7 days
 4. 5% over the next 7 days
 5. 0% over the next 11 days
+
+## Ropsten network configuration 1
+
+### Links
+
+1. _Token_ - https://ropsten.etherscan.io/address/0x92c0025ec29d63c1e443a9ede18e3995e4eca42c
+2. _ITO_ -
