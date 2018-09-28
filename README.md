@@ -149,3 +149,6 @@ https://ropsten.etherscan.io/token/
 
 - transfer 11 600 tokens, gas =
   https://ropsten.etherscan.io/tx/
+
+- transfer 100 (test strict call of mint function) tokens, gas = 43882
+  https://ropsten.etherscan.io/tx/0x3f63194e7d5a2084524d38088431ac3c757ec710d8971ca9f5383662bf550fd0
