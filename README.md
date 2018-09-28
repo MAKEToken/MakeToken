@@ -104,9 +104,48 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 4. 5% over the next 7 days
 5. 0% over the next 11 days
 
-## Ropsten network configuration 1
+## Ropsten network configuration
 
 ### Links
 
 1. _Token_ - https://ropsten.etherscan.io/address/0x92c0025ec29d63c1e443a9ede18e3995e4eca42c
-2. _ITO_ -
+2. _ITO_ - https://ropsten.etherscan.io/address/0x544f7fd679ef6266155cc2d3b7f11054678fa98e#code
+
+### Crowdsale stages
+
+#### ITO (1st stage)
+
+- _Minimal insvested limit_ : 0.1 ETH
+- _Base price_ : 1 ETH = 23 200 Tokens
+- _Start_ : 01 Sept 2018 00:00:00 GMT
+- _Wallet_ : 0x31d46f3ca67e1b91eddad881305ec522f9b82b17
+
+##### Bonuses
+
+60 days, bonus +40%
+
+##### Purchasers
+
+- 1 ETH => 23,200 tokens, gas =
+
+- 0.5 ETH => 11,600 tokens, gas =
+
+##### Service operations
+
+- setToken, gas = 43524
+  https://ropsten.etherscan.io/tx/0x56fe936df23c02dd24d2d29bcb9a6c61a51f00dfe2bb6e4b008ac1a6f4fa6516
+
+- setWallet, gas = 43898
+  https://ropsten.etherscan.io/tx/0xf5940d1410ce5e41eb66c591db6b3cd400f6e26830f446a91f6bfecf45e389f7
+
+### Token holders
+
+https://ropsten.etherscan.io/token/
+
+### Token transfers
+
+- transfer 23 200 tokens, gas =
+  https://ropsten.etherscan.io/tx/
+
+- transfer 11 600 tokens, gas =
+  https://ropsten.etherscan.io/tx/
