@@ -126,29 +126,34 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ##### Purchasers
 
-- 1 ETH => 23,200 tokens, gas =
+- 1 ETH => 23,200 tokens + 40% bonus, gas =
+  https://ropsten.etherscan.io/tx/0x0d4f31de22c28c9a661d8f9fb75550de50153dac62f2454d6bf4be2ff422812a
 
-- 0.5 ETH => 11,600 tokens, gas =
+- 0.5 ETH => 11,600 tokens + 40% bonus, gas =
+  https://ropsten.etherscan.io/tx/0x9f5d264f8c8574971cf8662bc14572a31ffc91b543e37aa2c621c7c93bfa1d4b
 
 ##### Service operations
 
 - setToken, gas = 43524
   https://ropsten.etherscan.io/tx/0x56fe936df23c02dd24d2d29bcb9a6c61a51f00dfe2bb6e4b008ac1a6f4fa6516
 
+- setMinter, gas= 44008
+  https://ropsten.etherscan.io/tx/0x86b7469ea4f40611db03a4558fe02da65ea3ae16856a7730db44e106bf44d229
+
 - setWallet, gas = 43898
   https://ropsten.etherscan.io/tx/0xf5940d1410ce5e41eb66c591db6b3cd400f6e26830f446a91f6bfecf45e389f7
 
 ### Token holders
 
-https://ropsten.etherscan.io/token/
+https://ropsten.etherscan.io/token/0x92c0025ec29d63c1e443a9ede18e3995e4eca42c
 
 ### Token transfers
 
 - transfer 23 200 tokens, gas =
-  https://ropsten.etherscan.io/tx/
+  https://ropsten.etherscan.io/tx/0x0d4f31de22c28c9a661d8f9fb75550de50153dac62f2454d6bf4be2ff422812a
 
 - transfer 11 600 tokens, gas =
-  https://ropsten.etherscan.io/tx/
+  https://ropsten.etherscan.io/tx/0x9f5d264f8c8574971cf8662bc14572a31ffc91b543e37aa2c621c7c93bfa1d4b
 
 - transfer 100 (test strict call of mint function) tokens, gas = 43882
   https://ropsten.etherscan.io/tx/0x3f63194e7d5a2084524d38088431ac3c757ec710d8971ca9f5383662bf550fd0
