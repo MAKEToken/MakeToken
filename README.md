@@ -126,10 +126,10 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ##### Purchasers
 
-- 1 ETH => 23,200 tokens + 40% bonus, gas =
+- 1 ETH => 23,200 tokens, gas = 92990
   https://ropsten.etherscan.io/tx/0x0d4f31de22c28c9a661d8f9fb75550de50153dac62f2454d6bf4be2ff422812a
 
-- 0.5 ETH => 11,600 tokens + 40% bonus, gas =
+- 0.5 ETH => 11,600 tokens, gas =107990
   https://ropsten.etherscan.io/tx/0x9f5d264f8c8574971cf8662bc14572a31ffc91b543e37aa2c621c7c93bfa1d4b
 
 ##### Service operations
@@ -149,10 +149,10 @@ https://ropsten.etherscan.io/token/0x92c0025ec29d63c1e443a9ede18e3995e4eca42c
 
 ### Token transfers
 
-- transfer 23 200 tokens, gas =
+- transfer 23 200 tokens, gas = 92990
   https://ropsten.etherscan.io/tx/0x0d4f31de22c28c9a661d8f9fb75550de50153dac62f2454d6bf4be2ff422812a
 
-- transfer 11 600 tokens, gas =
+- transfer 11 600 tokens, gas = 107990
   https://ropsten.etherscan.io/tx/0x9f5d264f8c8574971cf8662bc14572a31ffc91b543e37aa2c621c7c93bfa1d4b
 
 - transfer 100 (test strict call of mint function) tokens, gas = 43882

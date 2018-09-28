@@ -160,7 +160,6 @@ contract Ownable {
 
 /**
  * @title ERC20 interface
- * @dev see https://github.com/ethereum/EIPs/issues/20
  */
 contract ERC20 {
   function totalSupply() public view returns (uint256);
@@ -285,7 +284,7 @@ constructor () public {
     openingTime = 1535752800; //2018-09-01 00:00:00 first round start
     closingTime = 1538344800; //2018-10-01 00:00:00 first round end
 
-    bonus - 40; // %
+    bonus = 40; // %
     minInvestmentValue = 0.01 ether;
         
     gasAmount = 25000;
