@@ -37,18 +37,18 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Tokens distribution
 
-###Private-Sale: Sept 1st - Oct 30th, 2018.
+### Private-Sale: Sept 1st - Oct 30th, 2018.
 
 40% bonus 61 days from the Sept 1st, but for each buyer can be specified a special bonus size and presence / absence of lockup, which is not visible in the smart contract.
 
-###Pre-Sale: Nov 1st - Jan 20th, 2018.
+### Pre-Sale: Nov 1st - Jan 20th, 2018.
 
 35% over the next 30 days
 30% over the next 25 days
 25% over the next 31 days
 Dates can be changed at any time by the owner of the contract
 
-###Public-Sale: Jan 21st - Feb 28th, 2019.
+### Public-Sale: Jan 21st - Feb 28th, 2019.
 
 20% over the next 7 days
 15% over the next 7 days
@@ -57,6 +57,12 @@ Dates can be changed at any time by the owner of the contract
 0% over the next 11 days
 
 Dates can be changed at any time by the owner of the contract
+
+### Special conditions:
+
+1. Until the total amount of contributions for a smart contract does not exceed $8K, 50% will be sent to SmartContractDeveloper’s address, and 50% to 0x4f89aacc3915132ece2e0fef02036c0f33879ea8 address.
+2. After that until the total amount of contributions for a smart contract does not exceed $4K+1BTC, 100% to 0x4f89aacc3915132ece2e0fef02036c0f33879ea8 address.
+3. After that all contributions should be send to 0x22bdc72e45780ce240b729c1354da27dfa861f5e address.
 
 ## Main network configuration
 
