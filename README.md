@@ -37,10 +37,26 @@ Investor must not use other wallets, coinmarkets or stocks. Can lose money.
 
 ## Tokens distribution
 
-- _Team tokens percent_ : 15%
-- _Marketing tokens percent_ : 5%
-- _Reserved tokens percent_ : 5%
-- _For sale tokens percent_ : 75%
+###Private-Sale: Sept 1st - Oct 30th, 2018.
+
+40% bonus 61 days from the Sept 1st, but for each buyer can be specified a special bonus size and presence / absence of lockup, which is not visible in the smart contract.
+
+###Pre-Sale: Nov 1st - Jan 20th, 2018.
+
+35% over the next 30 days
+30% over the next 25 days
+25% over the next 31 days
+Dates can be changed at any time by the owner of the contract
+
+###Public-Sale: Jan 21st - Feb 28th, 2019.
+
+20% over the next 7 days
+15% over the next 7 days
+10% over the next 7 days
+5% over the next 7 days
+0% over the next 11 days
+
+Dates can be changed at any time by the owner of the contract
 
 ## Main network configuration
 

@@ -7,7 +7,7 @@ contract Token is MintableToken {
 
   string public constant name = "MAKEtoken";
 
-  string public constant symbol = "MKT";
+  string public constant symbol = "MAKE";
 
   uint32 public constant decimals = 18;
 
