@@ -77,7 +77,7 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
     mint(adv1_wallet,  1000000 * 10**18);
     mint(adv2_wallet, 35000000 * 10**18);
     mint(adv3_wallet, 15000000 * 10**18);
-    mint(adv4_wallet, 12500000 * 10**18);
+    mint(adv4_wallet, 10200000 * 10**18);
 
 
     mintingFinished = true;
