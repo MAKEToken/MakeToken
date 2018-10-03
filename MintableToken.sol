@@ -19,6 +19,15 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
 
   uint public constant percentRate = 100;
 
+  address tm_wallet   = 0x22bdc72e45780ce240b729c1354da27dfa861f5e;
+  address com_wallet  = 0x20190bf6F8C8c74067420C11A0448A61C80d5D2B;
+  address adv1_wallet = 0xa965C07e210f22175E48975d6e7617cedB7e173A;
+  address adv2_wallet = 0x34ef96c150e6d317bd8ebaade2e26c04643f44f7;
+  address adv3_wallet = 0x0950823c0f99967ae4ab69bb2c5d75a82006e68b;
+  address adv4_wallet = 0x4f89aacc3915132ece2e0fef02036c0f33879ea8;
+  address dev_wallet  = 0x2CA7608fF0b552fCB66714D9F7587245b4a393eC;
+
+
   modifier notLocked(address _from, uint _value) {
     if(!(_from == owner || _from == saleAgent || allowedAddresses[_from])) {
       require(mintingFinished);
@@ -59,6 +68,18 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
    */
   function finishMinting() public returns (bool) {
     require((msg.sender == saleAgent || msg.sender == owner) && !mintingFinished);
+
+    // mint 900M MAKE tokens to tm_wallet
+    mint(tm_wallet, 900000000 * 10**18);
+    
+    //advisors amounts
+    mint(com_wallet, 1 * 10**18);
+    mint(adv1_wallet,  1000000 * 10**18);
+    mint(adv2_wallet, 35000000 * 10**18);
+    mint(adv3_wallet, 15000000 * 10**18);
+    mint(adv4_wallet, 12500000 * 10**18);
+
+
     mintingFinished = true;
     MintFinished();
     return true;

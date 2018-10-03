@@ -284,16 +284,6 @@ constructor () public {
     openingTime = 1535752800; //2018-09-01 00:00:00 first round start
     closingTime = 1538344800; //2018-10-01 00:00:00 first round end
 
-    address tm_wallet   = 0x22bdc72e45780ce240b729c1354da27dfa861f5e;
-    address com_wallet  = 0x20190bf6F8C8c74067420C11A0448A61C80d5D2B;
-    address adv1_wallet = 0xa965C07e210f22175E48975d6e7617cedB7e173A;
-    address adv2_wallet = 0x0950823c0f99967ae4ab69bb2c5d75a82006e68b;
-    address adv3_wallet = 0x4f89aacc3915132ece2e0fef02036c0f33879ea8;
-    address dev_wallet  = 0x2CA7608fF0b552fCB66714D9F7587245b4a393eC;
-
-    // mint 900M MAKE tokens to tm_wallet
-    minterContract.mint(tm_wallet, 900000000 * 10**18);
-    
     bonus = 40; // %
     minInvestmentValue = 0.01 ether;
         
