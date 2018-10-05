@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
 import './token/StandardToken.sol';
 import './AddressesFilterFeature.sol';
@@ -19,6 +19,12 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
 
   uint public constant percentRate = 100;
 
+  uint256 public constant maxCapOfTokens = 5 * 10**9 * 10**18;
+
+  uint public constant lockPeriodForTMwallet = 6 * 30 * 24 * 60 * 60; //6 months
+  uint public lockPeriodEndForTMwallet;
+  
+
   address tm_wallet   = 0x22bdc72e45780ce240b729c1354da27dfa861f5e;
   address com_wallet  = 0x20190bf6F8C8c74067420C11A0448A61C80d5D2B;
   address adv1_wallet = 0xa965C07e210f22175E48975d6e7617cedB7e173A;
@@ -31,12 +37,19 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
   modifier notLocked(address _from, uint _value) {
     if(!(_from == owner || _from == saleAgent || allowedAddresses[_from])) {
       require(mintingFinished);
+      if (_from == tm_wallet) {
+        require ( now > lockPeriodEndForTMwallet);
+      } else 
       if((vestingPercent <= percentRate) && (vestingPercent != 0)) {
         uint minLockedBalance = initialBalances[_from].mul(vestingPercent).div(percentRate);
         require(minLockedBalance <= balances[_from].sub(_value));
       }
     }
     _;
+  }
+
+  constructor () public {
+    lockPeriodEndForTMwallet = now + lockPeriodForTMwallet;
   }
 
   function setVestingPercent(uint newVestingPercent) public {
@@ -51,14 +64,15 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
 
   function mint(address _to, uint256 _amount) public returns (bool) {
     require((msg.sender == saleAgent || msg.sender == owner) && !mintingFinished);
+    require(totalSupply.add(_amount) <= maxCapOfTokens);
     
     totalSupply = totalSupply.add(_amount);
     balances[_to] = balances[_to].add(_amount);
 
     initialBalances[_to] = balances[_to];
 
-    Mint(_to, _amount);
-    Transfer(address(0), _to, _amount);
+    emit Mint(_to, _amount);
+    emit Transfer(address(0), _to, _amount);
     return true;
   }
 
@@ -73,7 +87,7 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
     mint(tm_wallet, 900000000 * 10**18);
     
     //advisors amounts
-    mint(com_wallet, 1 * 10**18);
+    mint(com_wallet,         1 * 10**18);
     mint(adv1_wallet,  1000000 * 10**18);
     mint(adv2_wallet, 35000000 * 10**18);
     mint(adv3_wallet, 15000000 * 10**18);
@@ -81,7 +95,7 @@ contract MintableToken is AddressesFilterFeature, StandardToken {
 
 
     mintingFinished = true;
-    MintFinished();
+    emit MintFinished();
     return true;
   }
 
