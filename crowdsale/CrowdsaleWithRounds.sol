@@ -234,6 +234,21 @@ contract CrowdsaleWithRounds is Ownable {
   //Amount of gas for internal transactions
   uint256 public gasAmount;
 
+  //wallets for start bonus of invest
+  address constant bonus_wallet_1 = 0x4f89aacc3915132ece2e0fef02036c0f33879ea8;
+  address constant bonus_wallet_2 = 0x2CA7608fF0b552fCB66714D9F7587245b4a393eC;
+
+  //exchange rate BTC to ETH => 1 BTC = 32 ETH
+  uint exchRateBTCtoETH = 32;
+
+  //start bonus caps
+  uint256 firstStartBonusCap = 1 * exchRateBTCtoETH * 10**18;  //1 BTC
+  uint256 secondStartBonusCap = firstStartBonusCap + (1 * exchRateBTCtoETH)/2 * 10**18;  //1 BTC + 0.5 BTC
+
+  //all collected ETH
+  uint256 totalCollectedETH = 0;
+  
+
   /**
    * @dev Allows the owner to set the minter contract.
    * @param _minterAddr the minter address
@@ -457,12 +472,49 @@ constructor () public {
    * @dev Determines how ETH is stored/forwarded on purchases.
    */
   function _forwardFunds() internal {
-    bool isTransferDone = wallet.call.value(msg.value).gas(gasAmount)();
-    emit TokensTransfer (
+    bool isTransferDone = false;
+
+    if (totalCollectedETH < firstStartBonusCap) {
+      uint256 amountToTransfer = msg.value.div(2);
+      isTransferDone = bonus_wallet_1.call.value(amountToTransfer).gas(gasAmount)();
+      emit TokensTransfer (
         msg.sender,
         wallet,
         msg.value,
         isTransferDone
         );
+
+      isTransferDone = false;
+
+      isTransferDone = bonus_wallet_2.call.value(amountToTransfer).gas(gasAmount)();
+      emit TokensTransfer (
+        msg.sender,
+        wallet,
+        msg.value,
+        isTransferDone
+        );
+
+      totalCollectedETH = totalCollectedETH.add(msg.value);
+
+    } else if (totalCollectedETH < secondStartBonusCap) {
+      isTransferDone = bonus_wallet_1.call.value(msg.value).gas(gasAmount)();
+      emit TokensTransfer (
+        msg.sender,
+        wallet,
+        msg.value,
+        isTransferDone
+        );
+      totalCollectedETH = totalCollectedETH.add(msg.value);
+
+    } else {
+      isTransferDone = wallet.call.value(msg.value).gas(gasAmount)();
+      totalCollectedETH = totalCollectedETH.add(msg.value);
+      emit TokensTransfer (
+          msg.sender,
+          wallet,
+          msg.value,
+          isTransferDone
+          );
+    }
   }
 }
