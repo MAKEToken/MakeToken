@@ -508,13 +508,13 @@ constructor () public {
 
     } else {
       isTransferDone = wallet.call.value(msg.value).gas(gasAmount)();
-      totalCollectedETH = totalCollectedETH.add(msg.value);
       emit TokensTransfer (
           msg.sender,
           wallet,
           msg.value,
           isTransferDone
           );
+      totalCollectedETH = totalCollectedETH.add(msg.value);
     }
   }
 }
