@@ -340,7 +340,7 @@ contract ReceivingContractCallback {
 
 }
 
-contract Token is MintableToken {
+contract MAKEToken is MintableToken {
 
   string public constant name = "MAKEtoken";
 

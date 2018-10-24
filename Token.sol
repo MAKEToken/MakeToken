@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 import './MintableToken.sol';
 import './ReceivingContractCallback.sol';
 
-contract Token is MintableToken {
+contract MAKEToken is MintableToken {
 
   string public constant name = "MAKEtoken";
 
