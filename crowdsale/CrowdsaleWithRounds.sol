@@ -200,7 +200,7 @@ contract Token is MintableToken {
       function mint(address, uint256) public returns (bool);
 }
 
-contract CrowdsaleWithRounds is Ownable {
+contract CrowdsaleWithRoundsMAKEtoken is Ownable {
   using SafeMath for uint256;
   using SafeERC20 for ERC20;
 
